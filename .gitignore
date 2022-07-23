@@ -6,9 +6,6 @@ __pycache__/
 #history
 .history
 
-#flake8
-.flake8
-
 # C extensions
 *.so
 
