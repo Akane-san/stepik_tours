@@ -1,4 +1,4 @@
-from django.http import HttpResponseForbidden, HttpResponseNotFound
+from django.http import HttpResponseServerError, HttpResponseNotFound
 from django.shortcuts import render
 
 
@@ -15,9 +15,9 @@ def tour_view(request, id):
     return render(request, "tours/tour.html")
 
 
-def custom_handler500(request, exception):
+def custom_handler500(request):
     # Call when PermissionDenied raised
-    return HttpResponseForbidden('Внутрення ошибка сервера!')
+    return HttpResponseServerError('Внутрення ошибка сервера!')
 
 
 def custom_handler404(request, exception):

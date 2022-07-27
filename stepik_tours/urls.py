@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.urls import path
 from tours.views import main_view, tour_view, departure_view
-from tours import custom_handler404, custom_handler500
+from tours.views import custom_handler404, custom_handler500
 
 
 handler404 = custom_handler404
